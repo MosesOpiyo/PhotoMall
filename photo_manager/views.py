@@ -13,5 +13,24 @@ def home(request):
 def images(request):
      images = Image.objects.all()
      return render(request,'photo.html',{'images':images})
+    
+def search_images(request):
+    """This will return the 
+    Args:
+        request ([type]): [description]
+        search_term ([type]): [description]
+    """
+    if 'image' in request.GET and request.GET['image']:
+        search = request.GET.get("image")
+        images = Image.get_image_by_name(search)
+
+        message = f"{search}"
+
+        return render(request,'search.html',{"message":message,"images":images})
+
+    else:
+        message = "You have not searched for an image"
+        return render(request,'search.html',{"message":message})
+
 
 
