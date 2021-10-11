@@ -23,14 +23,18 @@
             <div class="container images">
 
                 <div class="row" style="margin-top: 10px;">
-                    {% for image in images %}
-                    <div class="col">
-                        <div class="card">
-                            <img src="{{ image.image.url }}" class="img-thumbnail">
-                        </div>
-                        <p>{{image.name}}</p>
-                        <p>{{image.descrition}} </p>
-                        <p>{{image.posted_date}}</p>
+                    {% for photo in photos %}
+                    <div class="row">
+                        <figure class="test thumbnail col-xs-6">
+                            <img src="{{photo.image.url}}" id="myImg" class="img-responsive" width="300" height="200">
+                            <div class="titleBox" style="font-family: 'Cabin Sketch', cursive">{{photos_item.image_name|upper}}</div>
+
+                            <figcaption>
+
+                                <a href="{% url 'singlePhoto' photos_item.id %}" <button type="button" name="button" class="btn btn-danger"> view image</button></a>
+
+                            </figcaption>
+                        </figure>
                     </div>
                     {% endfor %}
 

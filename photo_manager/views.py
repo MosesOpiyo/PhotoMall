@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from photo_manager.models import Image
+from photo_manager.models import  Photos
 
 # Create your views here.
 def home(request):
@@ -10,9 +10,9 @@ def home(request):
    
     return render(request,'base.html')
 
-def images(request):
-     images = Image.objects.all()
-     return render(request,'photo.html',{'images':images})
+def photos(request):
+     photos = Photos.objects.all()
+     return render(request,'photo.html',{'images':Photos})
     
 def search_images(request):
     """This will return the 
@@ -22,7 +22,7 @@ def search_images(request):
     """
     if 'image' in request.GET and request.GET['image']:
         search = request.GET.get("image")
-        images = Image.get_image_by_name(search)
+        images = Photos.get_image_by_name(search)
 
         message = f"{search}"
 

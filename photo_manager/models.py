@@ -1,7 +1,6 @@
 from django.db import models
 from django.db.models.fields import CharField
 from django.db.models.fields.files import ImageField
-
 # Create your models here.
 class Category(models.Model):
     """
@@ -66,7 +65,7 @@ class Location(models.Model):
     def __str__(self):
         return self.name
 
-class Image(models.Model):
+class Photos(models.Model):
      """
      This defines the image table and all its contents and behaviours
      """
@@ -82,21 +81,21 @@ class Image(models.Model):
 
 
      def get_image_by_id(id):
-        image = Image.objects.get(pk = id)
-        return image
+        photo = Photos.objects.get(pk = id)
+        return photo
 
 
-     def save_image(self):
+     def save_photo(self):
          self.save()
 
-     def delete_image(self):
+     def delete_photo(self):
         """This deletes the image from the database using its pk
         Args:
             id ([type]): [description]
         """
         self.delete()
     
-     def update_image(self,new):
+     def update_photo(self,new):
         """This method will update a record of an image
         """
         self.name = new.name
@@ -108,7 +107,7 @@ class Image(models.Model):
         self.save()
 
      def get_image_by_category(pk):
-         image = Category.objects.get(pk = id)
-         return image
+         photo = Category.objects.get(pk = id)
+         return photo
 
     
