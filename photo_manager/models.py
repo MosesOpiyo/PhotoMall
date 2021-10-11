@@ -100,7 +100,7 @@ class Photos(models.Model):
         """
         self.name = new.name
         self.image = new.image
-        self.descriptions = new.descriptions
+        self.description = new.description
         self.post_date = new.post_date
         self.category = new.category
         self.location = new.location
