@@ -3,9 +3,15 @@ from django.shortcuts import render
 from photo_manager.models import Image
 
 # Create your views here.
-def welcome(request):
+def home(request):
+    """
+    This will render the home page and the images
+    """
+   
     return render(request,'base.html')
 
-def my_photos(request):
-    photos = Image.objects.all()
-    return render(request,'my_photos.html',{'photos': photos})
+def images(request):
+     images = Image.objects.all()
+     return render(request,'photo.html',{'images':images})
+
+
