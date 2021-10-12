@@ -26,7 +26,7 @@
                     {% for photo in images %}
                     <div class="row">
                         <figure class="test thumbnail col-xs-6">
-                            <img src="{{photo.image.url}}" id="myImg" class="img-responsive" width="300" height="200">
+                            <img src="{{photo.image.url}}" id="myImg" class="img-responsive" width="400" height="300">
                             <div class="titleBox" style="font-family: 'Cabin Sketch', cursive">{{photos_item.image_name|upper}}</div>
 
                             <figcaption>
@@ -34,6 +34,8 @@
                                 <a href="#" <button type="button" name="button" class="btn btn-danger"> view image</button></a>
 
                             </figcaption>
+                            <!-- Scrollable modal -->
+
                         </figure>
                     </div>
                     {% endfor %}

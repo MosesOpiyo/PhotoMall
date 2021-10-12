@@ -14,6 +14,10 @@ def photos(request):
      photos = Photos.objects.all()
      return render(request,'photo.html',{'images':photos})
 
+# def single_photo(request, photo_id):
+#     photo = photos.objects.get(id=photo_id)
+#     return render(request, 'single_photo.html', {'photo':photo})
+
 # def view_photo(request,pk):
 #     photo = Photos.get_image_by_id(pk)
 #     return render(request,'photo.html',{'photo':photo})
