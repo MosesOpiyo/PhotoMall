@@ -7,7 +7,8 @@ from . import views
 urlpatterns=[
     path('',views.home,name = 'Home'),
     path('myphotos/',views.photos,name='myphotos'),
-    path('search/',views.search_images,name='search_photos')
+    path('search/',views.search_images,name='search_photos'),
+    path('single_photo/',views.single_photo,name='single_photo')
 ]
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
