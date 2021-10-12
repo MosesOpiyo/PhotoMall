@@ -40,10 +40,14 @@ THis is a django based project where a user gets to see all my photos and he/she
  * postgresql
  * bootstrap
 
+## Contact
 
+* Phone Number: 0707356745
+* Email: mosesopiyo54@gmail.com
+* Github: MosesOpiyo
 
 ### License
 
 MIT
 
-Copyright (c) 2018 **Moses Opiyo**
+Copyright (c) 2021 **Moses Opiyo**
