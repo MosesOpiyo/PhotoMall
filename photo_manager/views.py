@@ -29,12 +29,12 @@ def search_images(request):
         search_term ([type]): [description]
     """
     if 'image' in request.GET and request.GET['image']:
-        search = request.GET.get("image")
-        images = Photos.get_image_by_name(search)
+        search_term = request.GET.get("photo")
+        searched_photos = photos.search_by_category(search_term)
+        
+        message = f"{search_term}"
 
-        message = f"{search}"
-
-        return render(request,'search.html',{"message":message,"images":images})
+        return render(request,'search.html',{"message":message,"photos":searched_photos})
 
     else:
         message = "You have not searched for an image"
