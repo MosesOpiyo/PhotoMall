@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+}
+
+.banner {
+    width: 100%;
+    height: 8vh;
+    background-color: #9BF1A9;
+}
+
+h2 {
+    margin-left: 40px;
+}

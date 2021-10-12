@@ -1,1 +1,48 @@
-<img src="{{image.image.url}}">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">{% load static %}
+    <link rel="stylesheet" href="{% static 'photo.css'%}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>PhotoMall</title>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <h2>PhotoMall</h2>
+
+        </div>
+    </div>
+    <div class="container">
+        <figure class="test thumbnail col-xs-6">
+            <img src="{{image.image.url}}" id="myImg" class="img-responsive" width="100%" height="800vh" style="margin-top:50px;">
+            <h2 style="margin-top: 50px;">Name: {{image.name|upper}}</h2>
+            <h2 style="margin-top: 50px;">Category: {{image.category}}</h2>
+            <h2 style="margin-top: 50px;">Location: {{image.location}}</h2>
+            <h2 style="margin-top: 50px;">Posted on :{{image.post_date}}</h2>
+
+            <div class="row">
+                <script>
+                    function myFunction() {
+                        var copyText = document.getElementById("myInput");
+                        copyText.select();
+                        document.execCommand("Copy");
+                        alert("Copied the text: " + copyText.value);
+                    }
+                </script>
+                <a onclick="myFunction()" class="btn btn-danger ">Copy link  &nbsp<i class="glyphicon glyphicon-paperclip"></i>
+                 </a>
+            </div>
+        </figure>
+    </div>
+
+    </div>
+
+
+</body>
+
+</html>
