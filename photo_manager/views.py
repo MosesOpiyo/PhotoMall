@@ -12,7 +12,11 @@ def home(request):
 
 def photos(request):
      photos = Photos.objects.all()
-     return render(request,'photo.html',{'images':Photos})
+     return render(request,'photo.html',{'images':photos})
+
+# def view_photo(request,pk):
+#     photo = Photos.get_image_by_id(pk)
+#     return render(request,'photo.html',{'photo':photo})
     
 def search_images(request):
     """This will return the 

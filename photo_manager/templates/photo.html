@@ -23,7 +23,7 @@
             <div class="container images">
 
                 <div class="row" style="margin-top: 10px;">
-                    {% for photo in photos %}
+                    {% for photo in images %}
                     <div class="row">
                         <figure class="test thumbnail col-xs-6">
                             <img src="{{photo.image.url}}" id="myImg" class="img-responsive" width="300" height="200">
@@ -31,7 +31,7 @@
 
                             <figcaption>
 
-                                <a href="{% url 'singlePhoto' photos_item.id %}" <button type="button" name="button" class="btn btn-danger"> view image</button></a>
+                                <a href="#" <button type="button" name="button" class="btn btn-danger"> view image</button></a>
 
                             </figcaption>
                         </figure>

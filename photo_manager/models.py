@@ -70,7 +70,7 @@ class Photos(models.Model):
      This defines the image table and all its contents and behaviours
      """
      name = models.CharField(max_length=100)
-     image = models.ImageField(upload_to= 'Photos/')
+     image = models.ImageField(upload_to= 'articles/')
      description = models.TextField(blank=True)
      post_date = models.DateField(auto_now_add=True)
      category = models.ForeignKey(Category,on_delete=models.CASCADE)
