@@ -24,6 +24,15 @@ THis is a django based project where a user gets to see all my photos and he/she
 * View photos based on the location they were taken.
 
 
+## Dependacies
+* asgiref==3.4.1
+* Django==3.2.8
+* Pillow==8.3.2
+* psycopg2==2.9.1
+* pytz==2021.3
+* sqlparse==0.4.2
+
+
 ## Technologies Used
 
  * python
@@ -32,11 +41,9 @@ THis is a django based project where a user gets to see all my photos and he/she
  * bootstrap
 
 
-## Support and contact details
-email. markkariuki17@gmail.com
 
 ### License
 
 MIT
 
-Copyright (c) 2018 **David Mark  moringa school**
+Copyright (c) 2018 **Moses Opiyo**
