@@ -15,7 +15,10 @@
         <div class="navbar">
             <h2>PhotoMall</h2>
 
+
             <input type="text" placeholder="Search">
+
+
         </div>
         <div class="container">
             <h2>Images</h2>
@@ -23,24 +26,25 @@
             <div class="container images">
 
                 <div class="row" style="margin-top: 10px;">
-                    {% for photo in images %}
                     <div class="row">
+                        {% for photo in images %}
                         <figure class="test thumbnail col-xs-6">
+                            <h1></h1>
                             <img src="{{photo.image.url}}" id="myImg" class="img-responsive" width="400" height="250">
                             <div class="titleBox">{{photo.name|upper}}</div>
 
 
                             <figcaption>
 
-                                <a href="#" <button type="button" name="button" class="btn btn-danger"> view image</button></a>
+                                <a href="{% url 'image' photo.pk%}" class="btn btn-danger">View image</a>
 
                             </figcaption>
                             <hr>
                             <!-- Scrollable modal -->
 
                         </figure>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
 
                 </div>
 

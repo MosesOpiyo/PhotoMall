@@ -12,6 +12,28 @@
 <body>
     <div class="navbar">
         <h2>PhotoMall</h2>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Category<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'category' 5 %}">Movies</a></li>
+                        <li><a href="{% url 'category' 6 %}">Food</a></li>
+                        <li><a href="{% url 'category' 7 %}">Design</a></li>
+                        <li><a href="{% url 'category' 8 %}">Adventure</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Location<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'location' 6 %}">America</a></li>
+                        <li><a href="{% url 'location' 7 %}">Nairobi</a></li>
+                        <li><a href="{% url 'location' 8 %}">Mombasa</a></li>
+                        <li><a href="{% url 'location' 9 %}">Nakuru</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
         <input type="text" placeholder="Search">
     </div>
@@ -33,7 +55,7 @@
                     }
                 </script>
                 <input class="form-control" type="text" value="{{photo.image}}" id="myInput">
-                <a onclick="myFunction()" class="btn btn-default ">Copy Image link  &nbsp<i class="glyphicon glyphicon-paperclip"></i>
+                <a onclick="myFunction()" class="btn btn-default ">Copy link  &nbsp<i class="glyphicon glyphicon-paperclip"></i>
                  </a>
             </div>
         </figure>

@@ -40,5 +40,10 @@ def search_images(request):
         message = "You have not searched for an image"
         return render(request,'search.html',{"message":message})
 
+def single_image(request,pk):
+    image = Photos.objects.get(pk = pk)
+
+    return render(request,'image.html',{"image":image})
+
 
 
