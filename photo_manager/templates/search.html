@@ -16,6 +16,19 @@
             <h2>PhotoMall</h2>
             <form class="d-flex" role="search" action="{% url 'search' %}">
                 <input type="text" placeholder="Search">
+                <form id="make_checkbox_select">
+
+                    <select name="make">
+                        <option data-count="2" value="Alfa Romeo">Alfa Romeo</option>
+                        <option data-count="23" value="Audi">Audi</option>
+                        <option data-count="433" value="BMW">BMW</option>
+                        <option data-count="45" value="Chrysler">Chrysler</option>
+                        
+                    </select>
+
+                    <input type="submit" />
+
+                </form>
             </form>
 
 
