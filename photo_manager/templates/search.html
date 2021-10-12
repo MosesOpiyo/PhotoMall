@@ -5,39 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">{% load static %}
-    <link rel="stylesheet" href="{% static 'search.css'%}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <title>PhotoMall</title>
 </head>
 
 <body>
     <div class="banner">
         <div class="navbar">
-            <h2>PhotoMall</h2>
-            <form class="d-flex" role="search" action="{% url 'search_images' %}">
-                <input type="text" placeholder="Search">
-            </form>
-
+            <h1>PhotoMall</h1>
 
         </div>
-        <div class="container">
-            <div class="container images">
-                <p>{{images|length}} have been found from {{message1}}</p>
-                <div class="row" style="margin-top: 10px;">
-                    {% for image in images %}
-                    <div class="col">
-                        <div class="card">
-                            <img src="{{ image.image.url }}" class="img-thumbnail">
-                        </div>
-                        <p>{{image.name}}</p>
-                        <p>{{image.descrition}} </p>
-                        <p>{{image.posted_date}}</p>
-                    </div>
-                    {% endfor %}
+        <h2>Your source of pictures</h2>
+        <h2>Made possible by yourself</h2>
+        <input type="text">
+        <p>Images of various categories</p>
 
-                </div>
+    </div>
+    <div class="container">
 
-            </div>
+
+
 </body>
 
 </html>
