@@ -26,14 +26,16 @@
                     {% for photo in images %}
                     <div class="row">
                         <figure class="test thumbnail col-xs-6">
-                            <img src="{{photo.image.url}}" id="myImg" class="img-responsive" width="400" height="300">
-                            <div class="titleBox" style="font-family: 'Cabin Sketch', cursive">{{photos_item.image_name|upper}}</div>
+                            <img src="{{photo.image.url}}" id="myImg" class="img-responsive" width="400" height="250">
+                            <div class="titleBox">{{photo.name|upper}}</div>
+
 
                             <figcaption>
 
-                                <a href="{%url 'single_photo'photo.pk%}" <button type="button" name="button" class="btn btn-danger"> view image</button></a>
+                                <a href="#" <button type="button" name="button" class="btn btn-danger"> view image</button></a>
 
                             </figcaption>
+                            <hr>
                             <!-- Scrollable modal -->
 
                         </figure>

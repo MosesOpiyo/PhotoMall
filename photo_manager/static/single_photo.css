@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+}
+
+.navbar {
+    width: 100%;
+    height: 8vh;
+    background-color: #9BF1A9;
+}
