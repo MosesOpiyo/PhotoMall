@@ -23,7 +23,9 @@
                 </li>
             </ul>
 
-            <button class="btn btn-danger" href="{% url 'search_photos' %}">search for images</button>
+            <form class="d-flex" role="search" action="{% url 'search_images' %}">
+                <input type="text" placeholder="Search">
+            </form>
 
 
         </div>
